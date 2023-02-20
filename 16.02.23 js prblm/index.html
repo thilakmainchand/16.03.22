@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //map
+      const Places= new Map([
+        
+      ["italy","200km"],
+      ["chennai","600km"],
+      ["sattur","600km"],
+      ["turkey","500km"]
+      ]);
+      console.log(Places.get("italy"));
+
+    // filter
+      const ages =[ 68,89,23,11,15 ];
+     console.log (ages.filter(adult));
+
+      function adult(ages) {
+        return ages >= 18;
+      }
+    
+    // for each
+    let sum = 0; 
+
+    const numbers =[1,2,3,4,5,6,7,8];
+   
+    numbers.forEach(cell);
+
+    function cell(item) {
+       return sum += item;  
+    }
+    console.log(sum);
+
+
+//reduce
+const numbers = [15.5, 2.3, 1.1, 4.7];
+function getSum(total, num) {
+  return total + Math.round(num);
+}
+console.log(numbers.reduce(getSum,0));
+
+
+
+//for each console
+const names = ['ken', 'dhanush', 'vijay', 'ajith'];
+
+names.forEach(name => console.log(name));
+
+
+
+//Use map to create a new array by changing each number to square in the numbers array
+const num1 = [1, 2, 3, 4, 5];
+
+const squares = num1.map(num => num ** 2);
+
+console.log(squares);
+
+
+
+//Use filter to filter out country start with 'E';
+const countries = ['Argentina', 'Brazil', 'Chile', 'Ecuador', 'Europe', 'Germany', 'England'];
+function checkcountry(country) {
+    return country = countries[0]=='E';
+  }
+console.log(checkcountry);
+ 
+
+
+//Declare a function called getStringLists which takes an array as a parameter and then returns an array only with string items.
+
+function getStringLists(arr) {
+    const stringList = arr.filter(item => typeof item === 'string');
+    return stringList;
+  }
+  const myArr= [4, 'hihello', true, 10, 'asia'];
+  const stringList = getStringLists(myArr);
+  console.log(stringList)
+
+
+
+
+  // Use reduce to concatenate all the countries and to produce this sentence: Estonia, Finland, Sweden, Denmark, Norway, and IceLand are north European countries
+  var arr5 = ["Estonia", "Finland", "Sweden", "Denmark", "Norway", "IceLand"];
+            let result = arr5.reduce((acc,cur,ind)=>{
+                if(ind==(arr5.length)-1){
+                    return acc + ", and " + cur + " are north European countries";
+                }
+                else{
+                    return acc + ", " +cur;
+                }
+            })
+            console.log(result);
+
+            class user{
+                n;
+                constructor(name,age){
+                    this.name = name;
+                }
+            }
+
+            const u1 = new user("thilak",08);
+            console.log(u1.name);
+
+
+
+    //      Find out which letter is used many times as initial for a country name from the countries array (eg. Finland, Fiji, France etc)
+        const arr6 = ["Finland", "Fiji", "France","america"];
+        var hash = {};
+        for(var i=0;i<arr6.length;i++){
+            if(hash[arr6[i][0]]){
+                var val = hash[arr6[i][0]];
+                val++;
+                hash[arr6[i][0]] = val;
+            }
+            else{
+                hash[arr6[i][0]] = 1;
+            }
+        }
+        const maxi = Object.values(hash);
+        var mind = maxi.indexOf(Math.max(...maxi));
+        console.log(Object.keys(hash)[mind]);
+
+        // Assign the elements of constants array to e, pi, gravity, humanBodyTemp, waterBoilingTemp.-using destruction
+        const arr7 = [1,2,3,4,5];
+        const [e,pi,gravity,humanBodyTemp,waterBoilingTemp] = arr7;
+        console.log(e, pi, gravity, humanBodyTemp, waterBoilingTemp);
+
+        
+        const countries = ['Finland', 'Sweden', 'Norway']
+
+        // create an empty set
+        var set1 = new Set();
+        console.log(set1);
+
+        // Create a set containing 0 to 10 using loop
+        for(var i=0;i<10;i++){
+            set1.add(i);
+        }
+        console.log(set1);
+
+        // Remove an element from a set
+        set1.delete(1);
+        console.log(set1); 
+
+        // Clear a set
+        set1.clear();
+        console.log(set1);
+
+        // Create a set of 5 string elements from array
+        var set2 = new Set();
+        set2.add("hi");
+        set2.add("hii");
+        set2.add("hiii");
+        set2.add("hiiii");
+        set2.add("hiiiii");
+        console.log(set2);
+
+        // Create a map of countries and number of characters of a country
+        var map1 = new Map();
+        countries.forEach((country) => {
+            map1.set(country,country.length)
+        })
+        console.log(map1);
+
+
+        const a = [3, 4, 5, 7];
+        const b = [4, 5, 8, 9];
+        
+        // Find a union b
+        c = a.concat(b);
+        console.log(new Set(c));
+
+        // Find a intersection b
+        let r = a.filter(num=>b.indexOf(num) !== -1);
+        let c1 = new Set(r);
+        console.log(c1)
+
+        // Find a with b
+        let r1 = a.filter((num)=>{
+            return !b.includes(num);
+        })
+        console.log(r1);
+      
+    
+   
+    
+
+      
+
+    </script>
+</body>
+</html>
